@@ -173,7 +173,6 @@ getSelectedData() {
 },
 methods: {
 getSearchedData(val) {
-  console.log(val);
   if (val === null || val === "")
     this.search_results = [];
   else {
@@ -189,11 +188,9 @@ getSearchedData(val) {
     })
       .then((res) => {
         if (res.status) {
-          console.log("Val: ", res.data);
           res.data.forEach((val) => {
             this.search_results.push( { name: val.name, region: val.region, country: val.country, id: val.id, lat: val.lat, lon: val.lon });
           })
-          console.log("Result: ", this.search_results);
           this.isLoading = false;
         }
       })
