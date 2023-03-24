@@ -1,0 +1,15 @@
+.leftBlock,.centerBlock {
+    @media screen and (max-width: 1000px) {
+        max-width: 100% !important;
+    }
+}
+.card-container {
+    height: 100%;
+}
+
+.card-container .listItem {
+    vertical-align: middle;
+}
+.card-container .inside-card {
+    gap: 5px
+}
